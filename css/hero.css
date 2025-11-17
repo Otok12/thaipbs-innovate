@@ -1,0 +1,29 @@
+/* ในไฟล์ hero.css */
+
+.hero-section {
+    width: 100%;
+    text-align: center;
+    padding: 0; 
+    border-radius: 0 0 35px 35px;
+    overflow: hidden; 
+    
+    /* ***** เพิ่มบรรทัดนี้ครับ ***** */
+    background-color: #FFFFFF; /* ตั้งพื้นหลังส่วนนี้เป็นสีขาว */
+}
+
+.hero-cover {
+    display: block; 
+    width: 100%;
+    height: auto; 
+    max-width: 600px; /* (ขนาดที่เราเคยปรับไว้) */
+    margin: 0 auto;   
+
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%); /* สำหรับ Browser บางตัว */
+}
+
+/* (โค้ด .hero-text-section ก็ควรจะยังอยู่ที่นี่) */
+.hero-text-section {
+    text-align: center;
+    padding: 5px 20px 40px 20px;
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/mappoint.js"></script> 
+    <script src="https://code.highcharts.com/mapdata/countries/th/th-all.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พลิกโฉมสุขภาพจิตไทย! AI คัดกรองซึมเศร้า 'DMIND' เชื่อม 1323 ทันที</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/scrollama"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero-section">
+        <img src="images/hero.jpg" alt="ภาพประกอบหัวข้อสุขภาพจิต" class="hero-cover">
+    </header>
+
+    <section class="hero-text-section animate-fade-up">
+        <h1 class="header-large-orange">พลิกโฉมสุขภาพจิตไทย!</h1>
+        <h2 class="header-large-black">AI คัดกรองซึมเศร้า 'DMIND' เชื่อม 1323 ทันที</h2>
+    </section>
+    
+    <section class="dmind-slider-section animate-fade-up">
+        <p class="slider-description">
+            แอปพลิเคชัน DMIND ใช้ AI ประเมินภาวะซึมเศร้าผ่านเสียงและข้อความ
+            พร้อมเชื่อมโยงข้อมูลกับสายด่วน 1323 Plus Voice Detection
+            เพื่อให้ผู้มีความเสี่ยงได้รับการช่วยเหลืออย่างทันท่วงที
+        </p>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="images/P1.png" class="slide-img">
+                    <p class="slide-caption">หน้าหลักของแอป DMIND</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/P2.png" class="slide-img">
+                    <p class="slide-caption">หน้าประเมินตรวจจับภาวะเสี่ยง</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/P3.png" class="slide-img">
+                    <p class="slide-caption">ถามตอบอาการจาก AI</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/P4.png" class="slide-img">
+                    <p class="slide-caption">คำอธิบาย</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/P5.png" class="slide-img">
+                    <p class="slide-caption">เงื่อนไขและนโยบายข้อมูลส่วนบุคคล</p>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+    </section>
+    
+    <section id="scrolly-container">
+        <div id="scrolly-steps">
+            <div class="step" data-step="1">
+                <h3 class="header-medium-orange">วิกฤตจิตแพทย์!</h3>
+                <h4 class="header-medium-black">ไทยมีแค่ 1.3 คนต่อแสนประชากร สวนทาง WHO แนะ 3 คน - เทคโนโลยีช่วยเติมเต็ม</h4>
+                <p>ประเทศไทยมีจิตแพทย์ประมาณ 850 คน (ปี 2566) คิดเป็น 1.3 คน ต่อประชากร 100,000 คน
+ซึ่งต่ำกว่าค่าเฉลี่ยที่องค์การอนามัยโลก (WHO) แนะนำอย่างมาก (WHO แนะนำ 3 หรือ 10 คนต่อ 100,000 คน)</p>
+                
+                <h5 class="header-small-black">ทางออก/มาตรการ</h5>
+                <ul>
+                    <li>กรมสุขภาพจิตเร่งเพิ่มการอบรมจิตแพทย์ประจำเขต</li>
+                    <li>ส่งเสริมการใช้ Tele-Mental Health</li>
+                    <li>พัฒนาเครือข่ายนักจิตวิทยาคลินิก</li>
+                </ul>
+            </div>
+            
+            <section class="chart-section animate-fade-up">
+                <div class="chart-container">
+                    <h3 class="chart-title">จำนวนจิตแพทย์ไทยเทียบคำแนะนำ WHO</h3>
+
+                    <canvas id="psy-chart"></canvas>
+
+                    <p class="chart-note"></p>
+                </div>
+            </section>
+            
+            <section class="interactive-image-section animate-fade-up">
+
+                <div class="image-wrapper">
+                    <img src="images/R1.png" class="r1-image animate-fade-up" style="transition-delay: 0.2s;">
+
+                    <div class="hotspot hotspot-left"></div>
+                    <div class="hotspot hotspot-right"></div>
+
+                    <div class="hotspot-card card-left">
+                        ผู้ป่วยที่รอรับการรักษามีจำนวนมากเกิน<br>
+                        ปริมาณบุคลากรทางการแพทย์ที่มีอยู่
+                    </div>
+
+                    <div class="hotspot-card card-right">
+                        จำนวนจิตแพทย์ที่ไม่เพียงพอ<br>
+                        ต่อประชากรไทยมากกว่า<br>
+                        100,000 คน
+                    </div>
+                </div>
+            </section>
+            
+            <div class="step" data-step="2">
+                <h3 class="header-medium-orange">นวัตกรรมบริการ</h3>
+                <h4 class="header-medium-black">'เก้าอี้จำกัดพฤติกรรม'</h4>
+                <p>คว้า รางวัลบริการภาครัฐ! ช่วยผู้ป่วยก้าวร้าวอย่างปลอดภัย</p>
+            </div>
+            
+            <section class="interactive-image-section animate-fade-up">
+
+                <div class="image-wrapper">
+                    <img src="images/R2.png" class="r1-image animate-fade-up" style="transition-delay: 0.2s;">
+
+                    <div class="hotspot hotspot-r2-arm" data-card="r2arm"></div>
+
+                    <div class="hotspot-card card-r2arm">
+                        "เก้าอี้จำกัดพฤติกรรม" คิดค้นโดยสถาบันจิตเวชศาสตร์สมเด็จเจ้าพระยา
+                            ได้รับรางวัลบริการภาครัฐ ระดับดี
+                            ใช้สำหรับผู้ป่วยที่มีพฤติกรรมก้าวร้าว เพื่อความปลอดภัยของผู้ป่วยและบุคลากร
+                            ออกแบบให้รองรับสรีระและคงไว้ซึ่งศักดิ์ศรีของผู้ป่วย
+                    </div>
+                </div>
+
+            </section>
+            
+            <div class="step" data-step="3">
+                <h3 class="header-medium-orange">รู้ก่อนไป!</h3>
+                <h4 class="header-medium-black">เปิดค่าใช้จ่ายดูแลสุขภาพจิต รัฐ-เอกชน เริ่มต้นฟรีจนถึงหลักพันต่อครั้ง</h4>
+                <ul>
+                    <li><strong>โรงพยาบาลรัฐ:</strong> บริการเริ่มต้นที่ ฟรี (สิทธิ์ประกันสังคม, บัตรทอง)</li>
+                    <li><strong>โรงพยาบาลเอกชน/คลินิกฯ:</strong> ค่าใช้จ่ายจะสูงกว่า และอาจเริ่มตั้งแต่ หลักพันบาทต่อครั้ง</li>
+                </ul>
+            </div>
+            
+            <section class="hospital-compare-section animate-fade-up" style="margin-top: 20px;"> 
+                <h2 class="header-medium-orange">รู้ก่อนใช้บริการ!</h2>
+                <h3 class="header-medium-black">ค่าใช้จ่ายโรงพยาบาลรัฐ – เอกชน</h3>
+                <p>คลิกที่ไอคอนเพื่อดูราคาและรายละเอียดค่าใช้จ่าย</p>
+
+                <div class="hospital-icon-wrapper">
+                    <div class="hospital-icon-block">
+                        <img src="images/I1.png" class="hospital-icon is-active" id="iconState">
+                        <p class="icon-label">โรงพยาบาลรัฐ</p>
+                    </div>
+
+                    <div class="hospital-icon-block">
+                        <img src="images/I2.png" class="hospital-icon" id="iconPrivate">
+                        <p class="icon-label">โรงพยาบาลเอกชน</p>
+                    </div>
+                </div>
+
+                <div class="hospital-content-wrapper">
+                    <div id="popupState" class="hospital-content-panel is-active">
+                        <h3>ข้อมูลค่าใช้จ่ายในโรงพยาบาลรัฐ</h3>
+                        <h4 style="margin-top:25px;">กรณีใช้สิทธิบัตรทอง / ประกันสังคม / ข้าราชการ</h4>
+                        <table>
+                            <tr><td>พบแพทย์ทั่วไป</td><td>ฟรี (ตามสิทธิ์ เช่นบัตรทอง 30 บาท)</td><td>ขึ้นกับสิทธิ์</td></tr>
+                            <tr><td>ค่าเจาะเลือด</td><td>ฟรี / คิดเล็กน้อย</td><td>ขึ้นกับหน่วยบริการ</td></tr>
+                            <tr><td>ค่าตรวจเฉพาะทาง</td><td>80 – 150 บาท</td><td>ต้องมีการส่งตัว</td></tr>
+                            <tr><td>ค่าตรวจพิเศษ (เอกซเรย์ / อัลตราซาวด์)</td><td>300 – 500 บาท</td><td>ราคากลางมาตรฐาน</td></tr>
+                            <tr><td>ค่ายา</td><td>ฟรี / ราคายาไม่สูง</td><td>ยาตามบัญชียาหลัก</td></tr>
+                        </table>
+
+                        <h4 style="margin-top:25px;">กรณีไม่ใช้สิทธิ์</h4>
+                        <table>
+                            <tr><td>พบแพทย์ทั่วไป</td><td>500 – 1500 บาท</td><td>ไม่รวมค่ายา</td></tr>
+                            <tr><td>ตรวจเลือดพื้นฐาน</td><td>500 – 2,000 บาท</td><td>แล้วแต่รายการตรวจ</td></tr>
+                            <tr><td>ตรวจพิเศษ (เอกซเรย์)</td><td>1,000 – 3,000 บาท</td><td>แล้วแต่โรงพยาบาล</td></tr>
+                            <tr><td>ห้องพิเศษ</td><td>1,000 – 2,000 บาท/คืน</td><td>ไม่รวมบริการอื่น ๆ</td></tr>
+                        </table>
+                    </div>
+
+
+                    <div id="popupPrivate" class="hospital-content-panel">
+                        <h3>ข้อมูลค่าใช้จ่ายในโรงพยาบาลเอกชน</h3>
+                        <table>
+                            <tr><td>พบแพทย์ทั่วไป</td><td>1,500 – 3,000 บาท</td><td>แพทย์เฉพาะทางแพงกว่า</td></tr>
+                            <tr><td>ตรวจเลือดพื้นฐาน</td><td>1,000 – 3,000 บาท</td><td>สูงกว่ารัฐ 3–5 เท่า</td></tr>
+                            <tr><td>ตรวจพิเศษ (CT/MRI)</td><td>5,000 – 15,000 บาท</td><td>ขึ้นกับเครื่องแพทย์</td></tr>
+                            <tr><td>ค่าวัคซีน</td><td>2,000 – 6,000 บาท</td><td>วัคซีนพรีเมียม</td></tr>
+                            <tr><td>ห้องผู้ป่วยใน</td><td>2,500 – 6,000 บาท/คืน</td><td>ห้องเดี่ยวแพงขึ้น</td></tr>
+                            <tr><td>ห้องพิเศษ</td><td>10,000 – 15,000 บาท/คืน</td><td>โรงพยาบาลใหญ่ราคาเพิ่มขึ้น</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <div class="step" data-step="4">
+                </div>
+            
+            <section class="map-section-wrapper animate-fade-up"> <h2 class="header-medium-orange">เช็กที่นี่! แผนที่ GIS กรมสุขภาพจิต</h2>
+                <h3 class="header-medium-black">ระบุพิกัด 'จุดบริการสุขภาพจิต' ทั่วประเทศ</h3>
+                
+                <div id="interactive-map-container"></div>
+            </section>
+
+
+            <div class="step" data-step="5">
+                <h3 class="header-medium-orange">สสส. แนะ 3 อ. ดูแลสุขภาพ!</h3>
+                <h4 class="header-medium-black">หลักโภชนาการ และดัชนีชี้วัดความสุข (THI)</h4>
+                <p><strong>หลัก 3 อ. คือ:</strong> อาหาร ออกกำลังกาย และอารมณ์</p>
+                <p><strong>หลักโภชนาการ:</strong> เน้นอาหารหลากหลาย (ผัก 2 ส่วน, ข้าว-แป้ง 1 ส่วน, เนื้อสัตว์ 1 ส่วน)</p>
+                <p>การจัดการอารมณ์ด้วยหลัก 3 ส. (สะกด สกัด สะกิด)</p>
+                <p><strong>เครื่องมือวัดความสุข:</strong> ดัชนีชี้วัดความสุขคนไทย (THI)" ฉบับสั้น 15 ข้อ สำหรับสำรวจและประเมินความสุข</p>
+            </div>
+        </div>
+        <div id="scrolly-graphic"></div>
+    </section>
+
+    <section class="quiz-section animate-fade-up">
+        <h2 class="header-medium-black" style="text-align: center;">ดัชนีชี้วัดความสุขคนไทย (THI)</h2>
+        <p class="quiz-description">ในช่วง 1 เดือนที่ผ่านมา ท่านมีความรู้สึกอย่างไรบ้าง</p>
+        
+        <form id="thi-form">
+            <div class="question-group" id="q1-group"><p>1. ท่านรู้สึกว่าชีวิตของท่านมีความสุข</p><div class="options"><label><input type="radio" name="q1" value="0" required> ไม่เลย</label><label><input type="radio" name="q1" value="1"> เล็กน้อย</label><label><input type="radio" name="q1" value="2"> มาก</label><label><input type="radio" name="q1" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q2-group"><p>2. ท่านรู้สึกภูมิใจในตัวเอง</p><div class="options"><label><input type="radio" name="q2" value="0" required> ไม่เลย</label><label><input type="radio" name="q2" value="1"> เล็กน้อย</label><label><input type="radio" name="q2" value="2"> มาก</label><label><input type="radio" name="q2" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q3-group"><p>3. ท่านเบื่อหน่ายในการรับภาระทางครอบครัว/สังคมฯ</p><div class="options"><label><input type="radio" name="q3" value="3" required> ไม่เลย</label><label><input type="radio" name="q3" value="2"> เล็กน้อย</label><label><input type="radio" name="q3" value="1"> มาก</label><label><input type="radio" name="q3" value="0"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q4-group"><p>4. ท่านพึงพอใจในรูปร่างหน้าตาของท่าน</p><div class="options"><label><input type="radio" name="q4" value="0" required> ไม่เลย</label><label><input type="radio" name="q4" value="1"> เล็กน้อย</label><label><input type="radio" name="q4" value="2"> มาก</label><label><input type="radio" name="q4" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q5-group"><p>5. ท่านมั่นใจในศักยภาพที่จะเอาชนะอุปสรรค</p><div class="options"><label><input type="radio" name="q5" value="0" required> ไม่เลย</label><label><input type="radio" name="q5" value="1"> เล็กน้อย</label><label><input type="radio" name="q5" value="2"> มาก</label><label><input type="radio" name="q5" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q6-group"><p>6. ท่านรู้สึกประสบความสำเร็จ และความก้าวหน้าในชีวิต</p><div class="options"><label><input type="radio" name="q6" value="0" required> ไม่เลย</label><label><input type="radio" name="q6" value="1"> เล็กน้อย</label><label><input type="radio" name="q6" value="2"> มาก</label><label><input type="radio" name="q6" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q7-group"><p>7. ท่านไม่ใส่ใจคำวิพากษ์วิจารณ์ของคนอื่นที่ไม่ดี</p><div class="options"><label><input type="radio" name="q7" value="0" required> ไม่เลย</label><label><input type="radio" name="q7" value="1"> เล็กน้อย</label><label><input type="radio" name="q7" value="2"> มาก</label><label><input type="radio" name="q7" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q8-group"><p>8. ท้อแท้/เศร้าใจ/ ไม่สบายใจ/คับข้องใจ/สิ้นหวัง</p><div class="options"><label><input type="radio" name="q8" value="3" required> ไม่เลย</label><label><input type="radio" name="q8" value="2"> เล็กน้อย</label><label><input type="radio" name="q8" value="1"> มาก</label><label><input type="radio" name="q8" value="0"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q9-group"><p>9. ท่านสามารถรับรู้/เข้าใจอารมณ์ความรู้สึกต่างๆ ของตัวท่านเอง</p><div class="options"><label><input type="radio" name="q9" value="0" required> ไม่เลย</label><label><input type="radio" name="q9" value="1"> เล็กน้อย</label><label><input type="radio" name="q9" value="2"> มาก</label><label><input type="radio" name="q9" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q10-group"><p>10. ท่านรู้สึกเห็นใจในการช่วยเหลือผู้อื่นที่ตกอยู่ในความทุกข์ยาก</p><div class="options"><label><input type="radio" name="q10" value="0" required> ไม่เลย</label><label><input type="radio"name="q10" value="1"> เล็กน้อย</label><label><input type="radio" name="q10" value="2"> มาก</label><label><input type="radio" name="q10" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q11-group"><p>11. ท่านมีความสุขในการชื่นชม/ยินดีกับผู้อื่นที่ประสบความสำเร็จ</p><div class="options"><label><input type="radio" name="q11" value="0" required> ไม่เลย</label><label><input type="radio" name="q11" value="1"> เล็กน้อย</label><label><input type="radio" name="q11" value="2"> มาก</label><label><input type="radio" name="q11" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q12-group"><p>12. ท่านรู้สึกว่าชีวิตของท่านไร้เป้าหมาย</p><div class="options"><label><input type="radio" name="q12" value="3" required> ไม่เลย</label><label><input type="radio" name="q12" value="2"> เล็กน้อย</label><label><input type="radio" name="q12" value="1"> มาก</label><label><input type="radio" name="q12" value="0"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q13-group"><p>13. ท่านให้/พร้อมที่จะให้อภัย/ไม่ผูกพยาบาท เมื่อมีคนมาทำให้ท่านเจ็บช้ำน้ำใจ</p><div class="options"><label><input type="radio" name="q13" value="0" required> ไม่เลย</label><label><input type="radio" name="q13" value="1"> เล็กน้อย</label><label><input type="radio" name="q13" value="2"> มาก</label><label><input type="radio" name="q13" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q14-group"><p>14. ท่านมีความสุขุม/รอบคอบ/สม่ำเสมอ/ไม่หวั่นไหว/ยึดมั่นในความถูกต้องดีงาม</p><div class="options"><label><input type="radio" name="q14" value="0" required> ไม่เลย</label><label><input type="radio" name="q14" value="1"> เล็กน้อย</label><label><input type="radio" name="q14" value="2"> มาก</label><label><input type="radio" name="q14" value="3"> มากที่สุด</label></div></div>
+            <div class="question-group" id="q15-group"><p>15. ท่านเป็นคนมีสติ/สมาธิ/ปล่อยวาง/ยอมรับ/ไม่เครียด</p><div class="options"><label><input type="radio" name="q15" value="0" required> ไม่เลย</label><label><input type="radio" name="q15" value="1"> เล็กน้อย</label><label><input type="radio" name="q15" value="2"> มาก</label><label><input type="radio" name="q15" value="3"> มากที่สุด</label></div></div>
+
+            <button type="submit" class="calc-button">ประเมินผล</button>
+            
+            <div id="quiz-result">
+                </div>
+
+            <div id="quiz-scoring-key">
+                <h4>การแปลผลคะแนน</h4>
+                <p><strong>คะแนน 33-45:</strong> หมายถึง มีความสุขมากกว่าคนทั่วไป (Good)</p>
+                <p><strong>คะแนน 27-32:</strong> หมายถึง มีความสุขเท่ากับคนทั่วไป (Fair)</p>
+                <p><strong>คะแนน น้อยกว่า 26:</strong> หมายถึง มีความสุขน้อยกว่าคนทั่วไป (Poor)</p>
+                
+                <div class="scoring-tables-container">
+                    <div class="scoring-table">
+                        <h5>กลุ่มที่ 1 (ข้อ 1, 2, 4, 5, 6, 7, 9, 10, 11, 13, 14, 15)</h5>
+                        <table>
+                            <tr><td>ไม่เลย</td><td>0 คะแนน</td></tr>
+                            <tr><td>เล็กน้อย</td><td>1 คะแนน</td></tr>
+                            <tr><td>มาก</td><td>2 คะแนน</td></tr>
+                            <tr><td>มากที่สุด</td><td>3 คะแนน</td></tr>
+                        </table>
+                    </div>
+                    <div class="scoring-table">
+                        <h5>กลุ่มที่ 2 (ข้อ 3, 8, 12)</h5>
+                        <table>
+                            <tr><td>ไม่เลย</td><td>3 คะแนน</td></tr>
+                            <tr><td>เล็กน้อย</td><td>2 คะแนน</td></tr>
+                            <tr><td>มาก</td><td>1 คะแนน</td></tr>
+                            <tr><td>มากที่สุด</td><td>0 คะแนน</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </form>
+    </section>
+
+    <footer>
+        <p>แหล่งที่มาของข้อมูล: กรมสุขภาพจิต, สสส., และอื่นๆ</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

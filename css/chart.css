@@ -1,0 +1,31 @@
+/* ===========================================
+   5. CHART — Bar Chart Section (แก้ไข)
+   =========================================== */
+
+.chart-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* ลดช่องว่าง: เดิม 30px */
+    margin-bottom: 20px; /* ลดช่องว่าง: เดิม 40px */
+}
+
+.chart-container {
+    width: 650px;
+    padding: 30px;
+    background: #FFF3E0; 
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.chart-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #5D4037;
+    margin-bottom: 12px;
+}
+
+.chart-note {
+    font-size: 0.9rem;
+    color: #795548;
+}

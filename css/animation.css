@@ -1,0 +1,27 @@
+/* ===========================================
+   NEW FILE: animations.css (ฉบับปรับปรุง)
+   =========================================== */
+
+/* นี่คือ "สถานะซ่อน" ของทุกส่วนที่เราจะทำอนิเมชัน */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out; 
+}
+
+/* นี่คือ "สถานะแสดง" เมื่อ script.js สั่งเพิ่มคลาส .is-visible */
+.animate-fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ล้างคลาสเก่าออก เพื่อป้องกันความขัดแย้ง */
+.chart-section,
+.interactive-image-section,
+.hospital-compare-section,
+.map-section-wrapper,
+.quiz-section {
+    opacity: initial !important; 
+    transform: initial !important;
+    transition: initial !important;
+}
