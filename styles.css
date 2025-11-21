@@ -1,0 +1,619 @@
+/* ===========================================
+   From: base.css
+   =========================================== */
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #5D4037; 
+    background-color: #FFFFFF; 
+}
+.header-large-orange {
+    font-size: 3rem; 
+    font-weight: 900;
+    color: #FF5722; 
+    margin-top: 20px; 
+}
+.header-large-black {
+    font-size: 3rem; 
+    font-weight: 900;
+    color: #212121; 
+    margin-bottom: 5px; 
+}
+.header-medium-orange {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #E65100; 
+    margin-bottom: 5px; 
+}
+.header-medium-black {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #5D4037; 
+}
+.header-small-black {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5D4037; 
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+}
+footer {
+    text-align: center;
+    padding: 30px 20px; 
+    color: #795548;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 50px; 
+}
+
+/* ===========================================
+   From: hero.css
+   =========================================== */
+.hero-section {
+    width: 100%;
+    text-align: center;
+    padding: 0; 
+    border-radius: 0 0 35px 35px;
+    overflow: hidden; 
+    background-color: #FFFFFF; 
+}
+.hero-cover {
+    display: block; 
+    width: 100%;
+    height: auto; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%); 
+}
+.hero-text-section {
+    text-align: center;
+    padding: 5px 20px 40px 20px;
+}
+
+/* ===========================================
+   From: slider.css
+   =========================================== */
+.dmind-slider-section {
+    max-width: 1150px;
+    margin: 60px auto;
+    padding: 50px 0 60px;
+    background: #FFF3E0; 
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.slider-description {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: #795548;
+    max-width: 680px;
+    margin: 0 auto 40px;
+}
+.swiper {
+    width: 90%;
+}
+.swiper-slide {
+    background: #ffffff;
+    width: 260px !important;
+    padding: 25px 15px;
+    border-radius: 20px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+    transition: 0.25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide:hover {
+    transform: translateY(-6px);
+}
+.slide-img {
+    width: 200px;
+    height: 360px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+.slide-caption {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #795548;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: #795548 !important;
+    opacity: 0.5;
+    transition: 0.25s ease;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 1;
+    color: #5D4037 !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 42px !important;
+}
+
+/* ===========================================
+   From: scrolly.css
+   =========================================== */
+#scrolly-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#scrolly-steps {
+    max-width: 750px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+.step {
+    padding-bottom: 40px; 
+    opacity: 0.25;
+    transition: 0.5s;
+}
+.step.is-active {
+    opacity: 1;
+}
+.step p, .step ul {
+    color: #5D4037;
+}
+
+/* ===========================================
+   From: chart.css
+   =========================================== */
+.chart-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+.chart-container {
+    width: 650px;
+    padding: 30px;
+    background: #FFF3E0; 
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.chart-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #5D4037;
+    margin-bottom: 12px;
+}
+.chart-note {
+    font-size: 0.9rem;
+    color: #795548;
+}
+
+/* ===========================================
+   From: interactive-image.css
+   =========================================== */
+.interactive-image-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; 
+}
+.image-wrapper {
+    position: relative;
+    width: 900px;
+    max-width: 95%;
+    margin: auto;
+}
+.r1-image {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+.hotspot {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    background: rgba(255, 152, 0, 0.35); 
+    border-radius: 50%;
+    cursor: pointer;
+    animation: pulseOrange 1.8s infinite ease-in-out;
+    transition: 0.25s;
+    z-index: 10; 
+}
+.hotspot:hover {
+    transform: scale(1.15);
+    background: rgba(255, 152, 0, 0.45); 
+}
+@keyframes pulseOrange {
+    0% { transform: scale(1); opacity: 0.75; }
+    50% { transform: scale(1.18); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.75; }
+}
+.hotspot-left { top: 55%; left: 28%; }
+.hotspot-right { top: 40%; right: 18%; }
+.hotspot-card {
+    position: absolute;
+    width: 260px;
+    background: rgba(255, 251, 240, 0.95); 
+    color: #5D4037; 
+    padding: 15px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.45;
+    transition: 0.35s ease;
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 9; 
+}
+.card-left { top: 70%; left: 16%; }
+.card-right { top: 58%; right: 10%; }
+.hotspot-card.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.hotspot-r2-arm {
+    top: 55%; 
+    left: 60%; 
+    width: 90px; 
+    height: 90px; 
+    background: rgba(255, 69, 0, 0.45); 
+    animation: pulseRed 1.8s infinite ease-in-out; 
+}
+.card-r2arm {
+    top: 60%; 
+    left: 45%; 
+    width: 350px; 
+}
+@keyframes pulseRed {
+    0% { transform: scale(1); opacity: 0.75; }
+    50% { transform: scale(1.18); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.75; }
+}
+ 
+/* ===========================================
+   From: hospital.css
+   =========================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hospital-compare-section {
+    text-align: center;
+    margin-top: 40px; 
+    padding: 20px;
+}
+.hospital-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+.hospital-icon-block {
+    text-align: center;
+}
+.hospital-icon {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #FFF3E0; 
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+.hospital-icon.is-active {
+    opacity: 1;
+    transform: scale(1.05);
+    background: #FFE0B2; 
+}
+.icon-label {
+    font-weight: 700;
+    color: #795548;
+    margin-top: 12px;
+}
+.hospital-content-wrapper {
+    position: relative;
+    margin-top: 40px;
+}
+.hospital-content-panel {
+    width: 65%;
+    margin: 0 auto; 
+    background: #FFF3E0; 
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    display: none;
+}
+.hospital-content-panel.is-active {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+.hospital-content-panel table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.hospital-content-panel td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    color: #5D4037;
+    font-size: 1rem;
+}
+ 
+/* ===========================================
+   From: map.css
+   =========================================== */
+@keyframes pulseMarker {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.4); 
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.map-section-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+#interactive-map-container {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    margin: 20px auto 0 auto;
+    background: #FFFBF0; 
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+.highcharts-series-mappoint .highcharts-point {
+    transform-origin: center center;
+    animation: pulseMarker 2s infinite ease-in-out;
+}
+ 
+/* ===========================================
+   From: quiz.css
+   =========================================== */
+.quiz-section {
+    max-width: 900px;
+    margin: 40px auto 80px auto; 
+    padding: 40px;
+    background: #FFF3E0; 
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.quiz-description {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #795548; 
+    margin-bottom: 25px;
+}
+.question-group {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: 0.25s;
+}
+.question-group p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #5D4037; 
+    margin-bottom: 15px;
+}
+.options label {
+    font-size: 1rem;
+    color: #795548;
+}
+.options input[type="radio"] {
+    accent-color: #E65100; 
+}
+.calc-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 35px;
+    background: #FF9800; 
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.calc-button:hover {
+    background: #E65100; 
+}
+.result-score {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #5D4037;
+}
+.result-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #E65100;
+}
+.result-error {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #FF6B6B;
+}
+#quiz-scoring-key {
+    display: none;
+    padding-top: 25px;
+    border-top: 2px solid rgba(0,0,0,0.1);
+}
+#quiz-scoring-key h4 {
+    font-size: 1.5rem;
+    color: #5D4037;
+    margin-bottom: 20px;
+}
+#quiz-scoring-key h5 {
+    color: #5D4037;
+}
+#quiz-scoring-key p {
+    color: #795548;
+}
+.scoring-tables-container {
+    display: flex;
+    gap: 20px;
+}
+.scoring-table {
+    flex: 1;
+}
+.scoring-table table {
+    width: 100%;
+}
+.scoring-table th, 
+.scoring-table td {
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    color: #5D4037;
+}
+.scoring-table td:first-child {
+    background: rgba(0,0,0,0.03);
+}
+ 
+/* ===========================================
+   From: animation.css
+   =========================================== */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out; 
+}
+.animate-fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.chart-section,
+.interactive-image-section,
+.hospital-compare-section,
+.map-section-wrapper,
+.quiz-section {
+    opacity: initial !important; 
+    transform: initial !important;
+    transition: initial !important;
+}
+ 
+/* * ===========================================
+  * ★ 1. CSS ลูกเล่น Parallax ★
+  * ===========================================
+  */
+.hero-cover {
+    transition: transform 0.2s ease-out; /* ทำให้นุ่มนวลตอนปล่อยเมาส์ */
+}
+
+/* * ===========================================
+  * ★ 2. CSS ลูกเล่น Quiz Highlight ★
+  * ===========================================
+  */
+.question-group.is-answered {
+    background-color: #FFFBF0; /* สีครีมเดียวกับแผนที่ */
+    border-left: 5px solid #FF9800; /* สีส้มจากปุ่ม */
+    padding-left: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* * ===========================================
+  * ★ 3. CSS ลูกเล่น Scroll to Top ★
+  * ===========================================
+  */
+#scrollTopBtn {
+    position: fixed;
+    bottom: -100px; /* ซ่อนไว้นอกจอด้านล่าง */
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #FF9800; /* สีส้ม */
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#scrollTopBtn.show {
+    bottom: 25px; /* โชว์เมื่อเลื่อนจอลงมา */
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+#scrollTopBtn:hover {
+    background-color: #E65100; /* สีส้มเข้ม */
+}
+
+/* * ===========================================
+  * ★ 4. CSS Hospital List ★
+  * ===========================================
+  */
+.hospital-list-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.hospital-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.hospital-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.hospital-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.hospital-card-header {
+    padding: 15px 20px;
+}
+
+.hospital-card-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.hospital-card-body {
+    padding: 15px 20px;
+}
+
+.hospital-card-body p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #5D4037;
+}
+
+.hospital-address {
+    font-size: 0.9rem !important;
+    color: #795548 !important;
+    line-height: 1.5;
+}

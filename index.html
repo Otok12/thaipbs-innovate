@@ -2,22 +2,21 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
-    <script src="https://code.highcharts.com/maps/modules/mappoint.js"></script> 
-    <script src="https://code.highcharts.com/mapdata/countries/th/th-all.js"></script> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>พลิกโฉมสุขภาพจิตไทย! AI คัดกรองซึมเศร้า 'DMIND' เชื่อม 1323 ทันที</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
-    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js" defer></script>
+    <script src="https://code.highcharts.com/maps/highmaps.js" defer></script>
+    <script src="https://code.highcharts.com/mapdata/countries/th/th-all.js" defer></script>
+    <script src="https://unpkg.com/scrollama/build/scrollama.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 
 <body>
@@ -210,9 +209,11 @@
                 </div>
             
             <section class="map-section-wrapper animate-fade-up"> <h2 class="header-medium-orange">เช็กที่นี่! แผนที่ GIS กรมสุขภาพจิต</h2>
-                <h3 class="header-medium-black">ระบุพิกัด 'จุดบริการสุขภาพจิต' ทั่วประเทศ</h3>
+                <h3 class="header-medium-black">พิกัด 'จุดบริการสุขภาพจิต' ทั่วประเทศ</h3>
                 
-                <div id="interactive-map-container"></div>
+                <div id="interactive-map-container" class="animate-fade-up" style="transition-delay: 0.2s;"></div>
+                
+                <div id="hospital-list-container" class="hospital-list-wrapper animate-fade-up" style="transition-delay: 0.4s;"></div>
             </section>
 
 
@@ -284,11 +285,12 @@
             </form>
     </section>
 
+    <a href="#" id="scrollTopBtn">▲</a>
+
     <footer>
         <p>แหล่งที่มาของข้อมูล: กรมสุขภาพจิต, สสส., และอื่นๆ</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
+    <script src="scripts.js"></script>
+    </body>
 </html>
